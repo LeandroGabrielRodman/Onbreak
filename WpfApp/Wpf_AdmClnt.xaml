@@ -1,0 +1,37 @@
+﻿<Controls:MetroWindow x:Class="WpfApp.Wpf_AdmClnt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+
+        Title="Administracion De Clientes" Height="448.73" Width="747.433" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Arial" FontSize="18" FontWeight="Bold">
+    <Grid Margin="0,0,-6.4,0.4">
+        <Label x:Name="label" Content="RUT:" Margin="28,11,0,0" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Left" Width="61" Height="33" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txt_rut" Margin="164,11,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese un Rut" Width="314" Height="33" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Nombre:" Margin="28,85,0,0" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Left" Width="97" Height="34" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txt_razon_social" Margin="164,49,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese una Razon Social" Width="314" Height="33" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Email:" Margin="28,123,0,0" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Left" Width="97" Height="34" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txt_nombre" Margin="164,85,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese un Nombre" Width="314" Height="34" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy" Content="Direccion:" Margin="24,162,0,0" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Left" Width="101" Height="34" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txt_email" Margin="164,123,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese un Email" Width="314" Height="34" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy1" Content="Razón Social:" Margin="28,49,0,0" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Left" Width="131" Height="33" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txt_direccion" Margin="164,162,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese una Direccion" Width="314" Height="34" VerticalAlignment="Top"/>
+        <Label x:Name="label1_Copy2" Content="Teléfono:" Margin="24,201,0,0" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Left" Width="101" Height="34" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txt_telefono" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ej: 9 9937 3090" Height="34" Margin="164,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314"/>
+        <Label x:Name="label1_Copy3" Content="Actividad:" Margin="24,243,0,0" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Left" Width="101" Height="29" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="label1_Copy4" Content="Tipo:" Margin="28,277,0,0" FontFamily="Arial" FontWeight="Bold" HorizontalAlignment="Left" Width="61" Height="32" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cb_tipo" Margin="164,277,0,0" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="250" SelectionChanged="cb_tipo_SelectionChanged" FontFamily="Arial" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="btn_Guardar" Content="GUARDAR" HorizontalAlignment="Left" Margin="49,343,0,0" VerticalAlignment="Top" Width="148" FontFamily="Arial" FontWeight="Bold" Height="40" FontSize="16" Click="btn_Guardar_Click"/>
+        <Button x:Name="btn_buscar" Content="?" HorizontalAlignment="Left" Margin="534,22,0,0" VerticalAlignment="Top" Width="56" Click="button_Click_1" FontFamily="Arial" FontWeight="Bold" FontSize="18" Height="33"/>
+        <ComboBox x:Name="cb_actividad" HorizontalAlignment="Left" Margin="164,240,0,0" VerticalAlignment="Top" Width="250" Height="32" FontFamily="Arial" FontWeight="Bold" SelectionChanged="cb_Actividad_SelectionChanged" FontSize="18"/>
+        <Button x:Name="btn_buscar1" Content="Buscar" HorizontalAlignment="Left" Margin="620,25,0,0" VerticalAlignment="Top" Width="87" FontFamily="Arial" FontSize="18" FontWeight="Bold" Height="26" Click="btn_buscar1_Click"/>
+        <Button x:Name="btn_limpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="428,343,0,0" VerticalAlignment="Top" Width="134" Height="40" FontFamily="Arial" FontWeight="Bold" FontSize="20" Click="btn_limpiar_Click"/>
+        <Image Source="Imagenes/LogoColor_001.png.png" Margin="483,85,0.2,109.8"/>
+        <Button x:Name="btn_actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="255,342,0,0" VerticalAlignment="Top" Width="135" Height="40" FontSize="18" Click="btn_actualizar_Click_1"/>
+    </Grid>
+</Controls:MetroWindow>

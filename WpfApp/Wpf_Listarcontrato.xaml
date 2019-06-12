@@ -1,0 +1,33 @@
+﻿<Controls:MetroWindow x:Class="WpfApp.Wpf_Listarcontrato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+
+        Title="Lista De Contratos OnBreak" Height="551.4" Width="793.2" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Arial" FontSize="18" FontWeight="Bold">
+    <Grid Margin="0,0,4,-5.4">
+        <DataGrid x:Name="dgv_listacon" Margin="5,105,3.2,77" IsReadOnly="True" RenderTransformOrigin="0.5,0.5" SelectionChanged="dgv_listacon_SelectionChanged">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.174"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+        <Button x:Name="btn_traspasar" Visibility="Hidden"  Content="Traspasar" Margin="365,463,0,29" Click="btn_traspasar_Click" HorizontalAlignment="Left" Width="98"/>
+        <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" Margin="40,463,0,29" Width="98" Click="btn_salir_Click"/>
+        <Button x:Name="btn_filtrarc" Visibility="Hidden"  Content="Filtrar" HorizontalAlignment="Left" Margin="620,34,0,0" VerticalAlignment="Top" Width="75" Click="btn_filtrarc_Click"/>
+        <ComboBox x:Name="cb_tipoevento" Visibility="Hidden"  HorizontalAlignment="Left" Margin="419,34,0,0" VerticalAlignment="Top" Width="196" RenderTransformOrigin="0.5,0.5" SelectionChanged="cb_tipoevento_SelectionChanged" />
+        <Label x:Name="label" Visibility="Hidden" Content="Filtrar Tipo Evento:" HorizontalAlignment="Left" Margin="242,29,0,0" VerticalAlignment="Top"/>
+        <Image Source="Imagenes/LogoColor_001.png.png" HorizontalAlignment="Left" Height="75" Margin="40,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn_terminar" Visibility="Hidden" Content="Terminar" HorizontalAlignment="Left" Margin="639,463,0,0" VerticalAlignment="Top" Width="96" Height="36" Click="btn_terminar_Click"/>
+
+    </Grid>
+</Controls:MetroWindow>

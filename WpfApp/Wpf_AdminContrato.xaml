@@ -1,0 +1,67 @@
+﻿<Controls:MetroWindow x:Class="WpfApp.Wpf_AdminContrato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+
+        Title="Administracion De Contratos OnBreak" Height="633.33" Width="993.615" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" FontFamily="Arial" FontWeight="Bold" FontSize="18">
+    <Grid x:Name="Grid_Main" Margin="0,0,0.8,-1.8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle x:Name="rtg_Regtangulo" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="113" Margin="528,14,0,0" Stroke="Black" VerticalAlignment="Top" Width="376" Panel.ZIndex="-2"/>
+
+        <Label x:Name="label" Content="Numero De contrato" HorizontalAlignment="Left" Margin="18,45,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" FontFamily="Arial" Height="26" Width="145"/>
+        <Label x:Name="label1" Content="Creacion" HorizontalAlignment="Left" Margin="18,84,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" FontFamily="Arial" RenderTransformOrigin="0.526,1.586" Height="26" Width="70"/>
+        <Label x:Name="label3" Content="Fecha Hora de Inicio " HorizontalAlignment="Left" Margin="18,182,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="165" FontFamily="Arial" Height="28"/>
+        <Label x:Name="label4" Content="Fecha Hora de Termino" HorizontalAlignment="Left" Margin="18,231,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" FontFamily="Arial" Height="26" Width="165"/>
+        <Label x:Name="label5" Visibility="Hidden" Content="Direccion" HorizontalAlignment="Left" Margin="18,274,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" FontFamily="Arial" Height="26" Width="74"/>
+        <Label Content="Tipo evento:" HorizontalAlignment="Left" Margin="18,136,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" FontFamily="Arial" Height="26" Width="93"/>
+        <Label x:Name="label7" Content="Observaciones" HorizontalAlignment="Left" Margin="18,323,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" FontFamily="Arial" Height="26" Width="110"/>
+        <Button x:Name="btn_guardar" Content="Guardar" HorizontalAlignment="Left" Margin="108,538,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" FontSize="14" Click="btn_guardar_Click" Height="26"/>
+        <Button x:Name="btn_actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="236,538,0,0" VerticalAlignment="Top" Width="74" FontWeight="Bold" FontSize="14" Click="btn_actualizar_Click" Height="26"/>
+        <Button x:Name="btn_buscar" Content="Buscar" HorizontalAlignment="Left" Margin="428,45,0,0" VerticalAlignment="Top" Width="76" FontWeight="Bold" FontSize="14" Click="btn_buscar_Click" FontFamily="Arial" Height="26"/>
+        <TextBox x:Name="txt_observaciones" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese una observacion" Height="146" Margin="208,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="296" FontFamily="Arial" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="txt_direccion" Visibility="Hidden" HorizontalAlignment="Left"  Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese una direccion"  Height="26" Margin="211,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" FontFamily="Arial" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="txt_creacion" HorizontalAlignment="Left" Height="26" Margin="208,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" IsReadOnly="True" IsEnabled="False" FontFamily="Arial" FontWeight="Bold" FontSize="14"/>
+        <ComboBox x:Name="cb_tipoevento" HorizontalAlignment="Left"  Margin="211,136,0,0" VerticalAlignment="Top" Width="166" SelectionChanged="cb_tipoevento_SelectionChanged" FontFamily="Arial" FontWeight="Bold" FontSize="14" Height="26" />
+        <Button x:Name="btn_listar" Content="?" HorizontalAlignment="Left" Margin="388,45,0,0" VerticalAlignment="Top" Width="30" FontWeight="Bold" FontSize="14" Click="btn_listar_Click" FontFamily="Arial" Height="26"/>
+        <TextBox x:Name="txt_contrato" HorizontalAlignment="Left"  Height="26" Margin="208,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontFamily="Arial" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="btn_limpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="374,538,0,0" VerticalAlignment="Top" Width="76" Click="btn_limpiar_Click" FontWeight="Bold" FontSize="14" Height="26"/>
+        <Label x:Name="label8" Content="Valor Base:" HorizontalAlignment="Left" Margin="543,192,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" FontSize="14" Height="26" Width="86"/>
+        <TextBox x:Name="txt_valorbase" HorizontalAlignment="Left"   Height="26" Margin="700,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="14" FontWeight="Bold" TextChanged="txt_valorbase_TextChanged" FontFamily="Arial">
+            <TextBox.ContextMenu>
+                <ContextMenu/>
+            </TextBox.ContextMenu>
+        </TextBox>
+        <Label x:Name="label9" Content="Personal Base:" HorizontalAlignment="Left" Margin="543,231,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" FontFamily="Arial" Height="26" Width="111"/>
+        <TextBox x:Name="txt_personalbase" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Height="26" Margin="700,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" TextChanged="txt_personalbase_TextChanged" FontFamily="Arial" FontSize="14" FontWeight="Bold"/>
+        <DatePicker x:Name="dpkFechaInicio" HorizontalAlignment="Left" Margin="211,182,0,0" VerticalAlignment="Top" Width="186" SelectedDateFormat="Short" FontFamily="Arial" FontWeight="Bold" FontSize="14" Height="28"/>
+        <DatePicker x:Name="dpkFechaTermino" HorizontalAlignment="Left" Margin="211,230,0,0" VerticalAlignment="Top" Width="184" FontFamily="Arial" FontWeight="Bold" FontSize="14" Height="27"/>
+        <Label x:Name="lbl_uf" Content="" HorizontalAlignment="Left" Margin="700,144,0,0" VerticalAlignment="Top" Height="30" Width="166" FontSize="14" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBox x:Name="txt_cantasis" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Height="28" Margin="700,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" TextChanged="txt_cantasis_TextChanged" FontFamily="Arial" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Cantidad Asistentes:" HorizontalAlignment="Left" Margin="543,272,0,0" VerticalAlignment="Top" FontSize="14" Height="28" Width="149" FontFamily="Arial" FontWeight="Bold"/>
+        <TextBox x:Name="txt_personalextra" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True"   Height="26" Margin="700,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" TextChanged="txt_personalextra_TextChanged" FontFamily="Arial" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="label10" Content="Personal Extra:" HorizontalAlignment="Left" Margin="543,313,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial" FontWeight="Bold" Height="26" Width="113"/>
+        <Label x:Name="label12" Content="Valor UF:" HorizontalAlignment="Left" Margin="544,148,0,0" VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" FontSize="14" Height="26" Width="71"/>
+        <Label x:Name="lbl_valortotal" Content="" HorizontalAlignment="Left" Margin="700,372,0,0" VerticalAlignment="Top" Width="164" FontFamily="Arial" FontWeight="Bold" FontSize="14" Height="26"/>
+        <Button x:Name="btn_CalCularTotal" Content="Calcular Costo Total" HorizontalAlignment="Left" Margin="668,427,0,0" VerticalAlignment="Top" Width="198" Click="btn_CalCularTotal_Click" Height="36"/>
+        <Button x:Name="btn_BuscarPorRut" Content="Buscar Rut" HorizontalAlignment="Left" Margin="769,45,0,0" VerticalAlignment="Top" Width="95" Click="btn_BuscarPorRut_Click" Height="26"/>
+        <TextBox x:Name="txt_buscarporrut" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese Rut de cliente"  Height="26" Margin="543,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <TextBox x:Name="txt_nombrecliente" HorizontalAlignment="Left" Height="26" Margin="543,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Image Source="Imagenes/LogoColor_001.png.png" Margin="625,468,0,-0.2"/>
+        <Label x:Name="label2" Content="Valor Total:" HorizontalAlignment="Left" Margin="544,372,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="label6" Content="Modalidad De Servicio" HorizontalAlignment="Left" Margin="18,282,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ComboBox x:Name="cb_ModalidadServicio" HorizontalAlignment="Left" Margin="209,282,0,0" VerticalAlignment="Top" Width="184" FontFamily="Arial" FontSize="14" SelectionChanged="cb_ModalidadServicio_SelectionChanged"/>
+        <Button x:Name="btn_BuscarRut" Content="?" HorizontalAlignment="Left" Margin="726,45,0,0" VerticalAlignment="Top" Width="30" Click="button1_Click" Height="26"/>
+        <RadioButton x:Name="rbs_yes" Content="Realizado" HorizontalAlignment="Left" Margin="410,96,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Controls:MetroWindow>
