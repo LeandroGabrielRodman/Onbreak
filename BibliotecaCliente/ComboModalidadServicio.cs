@@ -1,22 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BibliotecaDALC;
-namespace BibliotecaClases
-{
-    public class ComboModalidadServicio
-    {
-        public String IdModalidad { get; set; }
-        public int IdTipoEvento { get; set; }
-        public String Nombre { get; set; }
-        public Double ValorBase { get; set; }
-        public int PersonalBase { get; set; }
-        public ComboModalidadServicio()
-        {
-
-        }
+﻿
         private OnBreakEntities1 bdd = new OnBreakEntities1();
         public List<ModalidadServicio> ModServ(int IdTpEvnto)
         {
